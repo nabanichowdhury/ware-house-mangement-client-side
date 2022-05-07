@@ -50,7 +50,7 @@ const Register = () => {
   }
 
   return (
-    <div className="text-light w-50 mx-auto container">
+    <div className="text-dark w-50 mx-auto container">
       <h1>Register Here</h1>
       <form onSubmit={handleSubmit}>
         <div class="mb-3">

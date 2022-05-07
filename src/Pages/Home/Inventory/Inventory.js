@@ -4,7 +4,7 @@ import InventoryDetails from "../../InventoryDetails/InventoryDetails";
 import "./Iventory.css";
 
 const Inventory = (props) => {
-  const { name, description, img, price, quantity } = props.inventory;
+  const { name, description, img, price, quantity, _id } = props.inventory;
   const navigate = useNavigate();
   const handleInventoryDetails = (id) => {
     navigate(`/inventory/${id}`);
@@ -17,7 +17,7 @@ const Inventory = (props) => {
         <p>Price:{price}</p>
         <p>Quantity:{quantity}</p>
         <p>{description}</p>
-        <button className="button" onClick={() => handleInventoryDetails()}>
+        <button className="button" onClick={() => handleInventoryDetails(_id)}>
           Know Details
         </button>
       </div>
