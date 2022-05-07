@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Home/Home";
 import InventoryDetails from "./Pages/InventoryDetails/InventoryDetails";
+import ManageInventory from "./Pages/ManageInventory/ManageInventory";
 import Login from "./Pages/RegisterAndLogin/Login/Login";
 import Register from "./Pages/RegisterAndLogin/Register/Register";
 import RequiredAuth from "./Pages/RequireAuth/RequireAuth";
@@ -17,6 +18,10 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route
+          path="/inventories"
+          element={<ManageInventory></ManageInventory>}
+        ></Route>
 
         <Route
           path="/inventory/:id"
