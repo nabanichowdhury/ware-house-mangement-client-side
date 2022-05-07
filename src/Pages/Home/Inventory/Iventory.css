@@ -1,0 +1,18 @@
+.inventory-container {
+  height: 500px;
+  width: 270px;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  line-height: 16px;
+  padding: 10px;
+}
+.inventory-container img {
+  width: 250px;
+  height: 300px;
+}
+.button {
+  background-color: rgb(255, 192, 236);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}

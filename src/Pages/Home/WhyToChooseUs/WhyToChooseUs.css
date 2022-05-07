@@ -1,0 +1,25 @@
+.header {
+  color: rgb(52, 9, 62);
+}
+
+.full-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.choose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 7px;
+  background-color: rgb(255, 212, 220);
+}
+.choose-container img {
+  width: 100px;
+  border-radius: 50%;
+}

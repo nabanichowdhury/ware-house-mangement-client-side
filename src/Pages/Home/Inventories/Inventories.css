@@ -1,0 +1,15 @@
+.inventories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 10px;
+}
+.button-show {
+  background-color: rgb(212, 62, 212);
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  margin-left: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
