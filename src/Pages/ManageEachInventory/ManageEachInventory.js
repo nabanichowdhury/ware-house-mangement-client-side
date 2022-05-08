@@ -5,6 +5,7 @@ import "./ManageEachInventory.css";
 const ManageEachInventory = (props) => {
   const [inventories, setInventories] = useInventories();
   const { name, description, img, price, _id } = props.inventory;
+
   const handleDeleteButton = (id) => {
     const proceed = window.confirm("Are you sure to delete this?");
     if (proceed) {
@@ -14,6 +15,7 @@ const ManageEachInventory = (props) => {
       })
         .then((res) => res.json())
         .then((data) => {
+          // this is not happening in the ui....Adter reloading itis getting deleted
           if (data.deletedCount > 0) {
             console.log("deleted");
             const remaining = inventories.filter(
