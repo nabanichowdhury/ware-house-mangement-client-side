@@ -11,6 +11,7 @@ import RequiredAuth from "./Pages/RequireAuth/RequireAuth";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/NotFound/NotFound";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -36,7 +37,17 @@ function App() {
           }
         ></Route>
         <Route path="/inventories/add" element={<AddItems></AddItems>}></Route>
-        <Route path="/myItem" element={<MyItems></MyItems>}></Route>
+        <Route
+          path="/myItem"
+          element={
+            <RequiredAuth>
+              <MyItems></MyItems>
+            </RequiredAuth>
+          }
+        ></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}>
+          {" "}
+        </Route>
       </Routes>
       <Footer></Footer>
     </div>
