@@ -33,13 +33,7 @@ const AddItems = () => {
         <input type="text" placeholder="Photo-Url" {...register("img")} />{" "}
         <br />
         <input type="email" placeholder="Email" {...register("email")} /> <br />
-        <input
-          type="submit"
-          value="Add this item"
-          onClick={() => {
-            navigate("/inventories");
-          }}
-        />
+        <input type="submit" value="Add this item" />
       </form>
     </div>
   );

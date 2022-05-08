@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import MyItems from "./MyItems/MyItems";
+import MyItems from "./Pages/MyItems/MyItems";
 import AddItems from "./Pages/AddItems/AddItems";
 import Home from "./Pages/Home/Home/Home";
 import InventoryDetails from "./Pages/InventoryDetails/InventoryDetails";
