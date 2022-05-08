@@ -10,6 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../firebase.init";
 import Loading from "../../Loading/Loading";
+import axios from "axios";
 
 import Register from "../Register/Register";
 
@@ -27,12 +28,18 @@ const Login = () => {
   const [signInWithFacebook, userFacebook, loadingFacebook, errorFacebook] =
     useSignInWithFacebook(auth);
   // Handle submit button with email
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password);
-    console.log(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const { data } = await axios.get(
+      "https://quiet-lake-14811.herokuapp.com/login",
+      { email }
+    );
+    console.log(data);
+    localStorage.setItem("accessToken", data.accessToken);
+    navigate(from, { replace: true });
   };
   // Handle google login
   const handleGoogleLogin = () => {

@@ -12,7 +12,7 @@ const Inventories = () => {
   };
 
   return (
-    <div>
+    <div id="inventories">
       <h1>Inventories</h1>
 
       <div className="inventories container">

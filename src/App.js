@@ -10,6 +10,7 @@ import Register from "./Pages/RegisterAndLogin/Register/Register";
 import RequiredAuth from "./Pages/RequireAuth/RequireAuth";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           path="/inventories"
           element={<ManageInventory></ManageInventory>}
         ></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
 
         <Route
           path="/inventory/:id"

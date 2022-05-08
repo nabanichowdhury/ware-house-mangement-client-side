@@ -11,9 +11,14 @@ const MyItems = () => {
     const getOrders = async () => {
       const email = user.email;
 
-      const url = `http://localhost:5000/myitems?email=${email}`;
+      const url = `https://quiet-lake-14811.herokuapp.com/myitems?email=${email}`;
 
-      const { data } = await axios.get(url);
+      const { data } = await axios.get(url, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
+
       setItems(data);
     };
     getOrders();

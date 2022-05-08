@@ -11,7 +11,7 @@ const InventoryDetails = (props) => {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://quiet-lake-14811.herokuapp.com/inventory/${id}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -25,7 +25,7 @@ const InventoryDetails = (props) => {
     quantity = setQuantity(quan - 1);
     const updatedUser = { quantity };
 
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://quiet-lake-14811.herokuapp.com/inventory/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
