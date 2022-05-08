@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import MyItems from "./MyItems/MyItems";
 import AddItems from "./Pages/AddItems/AddItems";
 import Home from "./Pages/Home/Home/Home";
 import InventoryDetails from "./Pages/InventoryDetails/InventoryDetails";
@@ -33,6 +34,7 @@ function App() {
           }
         ></Route>
         <Route path="/inventories/add" element={<AddItems></AddItems>}></Route>
+        <Route path="/myItem" element={<MyItems></MyItems>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

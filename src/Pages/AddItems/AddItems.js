@@ -1,8 +1,10 @@
 import React from "react";
 import "./AddItems.css";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const AddItems = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
@@ -30,7 +32,14 @@ const AddItems = () => {
         <br />
         <input type="text" placeholder="Photo-Url" {...register("img")} />{" "}
         <br />
-        <input type="submit" value="Add this item" />
+        <input type="email" placeholder="Email" {...register("email")} /> <br />
+        <input
+          type="submit"
+          value="Add this item"
+          onClick={() => {
+            navigate("/inventories");
+          }}
+        />
       </form>
     </div>
   );

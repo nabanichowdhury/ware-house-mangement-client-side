@@ -3,7 +3,7 @@ import "./WhyToChooseUs.css";
 
 const WhyToChooseUs = () => {
   return (
-    <div className="container m-5">
+    <div className="container m-5" id="choose-Us">
       <h1 className="header">Why to choose us?</h1>
       <div className="full-container">
         <div className="choose-container">

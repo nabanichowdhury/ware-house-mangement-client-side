@@ -16,7 +16,10 @@ const ManageInventory = () => {
     <div>
       <div className="inventories container">
         {inventories.map((inventory) => (
-          <ManageEachInventory inventory={inventory}></ManageEachInventory>
+          <ManageEachInventory
+            key={inventories._id}
+            inventory={inventory}
+          ></ManageEachInventory>
         ))}
         <button className="btn-add" onClick={handleAddItems}>
           Add more items
